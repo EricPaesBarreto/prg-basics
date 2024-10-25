@@ -25,6 +25,5 @@ print('The hex representation of the denary value [304] is: ', hex_num)
 unicode_int = '€'.decode("utf-8")
 print('The unicode representation of the € sign is: ', unicode_int)
 
-import math
 abs_num = abs(-17)
 print('The absolute value of [-17] is: ', abs_num)
