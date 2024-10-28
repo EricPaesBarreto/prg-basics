@@ -24,7 +24,7 @@ def DrawTriangle(size):
     pen.pendown()
     for i in range(3):
         pen.forward(size)
-        pen.right(45)
+        pen.right(120)
 
 def DrawRectangle(width, length):
     pen.pendown()
@@ -39,7 +39,7 @@ def DrawRectangle(width, length):
 
 DrawSquare(30)
 DrawRectangle(50,60)
-DrawTriangle(20)
+DrawTriangle(70)
 
 # Hide the turtle and finish
 pen.hideturtle()
