@@ -1,4 +1,5 @@
-def f(data):
+def fits_tolerance(main, tolerance): 
+    return lambda data: (data > main - (main * tolerance) and data < main + (main * tolerance))
     
 
 if __name__ == "__main__":
@@ -6,5 +7,6 @@ if __name__ == "__main__":
     print("Bottle capacity:    500ml")
     print("Filling tolerance:  2%")
     print(f"Filled bottles:     {data}")
-    incorrectly_filling = f(data)
-    print(f"Incorrectly filled: {incorrectly_filled}%")
+    correctly_filled = list(filter(fits_tolerance(500, 0.02), data))
+    incorrect_percentage = (len(data) - len(correctly_filled)) / len(data) * 100
+    print(f"Incorrectly filled: {incorrect_percentage}%")
